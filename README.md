@@ -65,37 +65,21 @@ terraform destroy
 ## Challenges Faced
 Here are some real-world issues I faced while building this, and what I learned from them:
 
-# -SSH & Key Management
+### -SSH & Key Management
 -Problem: .ppk and .pem key confusion when accessing EC2 from Windows.
 
 -Fix: Used PuTTYgen to convert keys and used chmod 400 for proper permissions.
 
-# -Networking Misconfiguration
+### -Networking Misconfiguration
 Problem: Load Balancer failed due to subnet/zone errors.
 
 Fix: Created public subnets in two separate Availability Zones for ALB.
-#  -Port Inaccessibility
+### -Port Inaccessibility
 Problem: NGINX/Flask wasn’t publicly visible.
 Fix: Allowed inbound traffic on port 80 via Security Groups.wrote rule set to enable.
 
-#  Curl Debugging
+###  Curl Debugging
 Problem: Bad request errors due to incorrect header formatting.
 
 Fix: Escaped double quotes and ensured proper Content-Type
 
-
-
-
-
-
-
-
-
-
-
-
-Tools
-
-
-
-ChatGPT can make
